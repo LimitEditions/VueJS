@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@next"></script>
+        <title>Document</title>
+
+        <style>
+        .show {
+            animation: visibali 1s ease-in-out;
+        }
+
+        @keyframes visibali {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="app">{{ message }}
+            <p>Товаров в корзине: {{ count }}</p>
+            <button @click="buy">{{ byuBtn }}</button>
+            
+            <br />
+            <button @click="isCanBuy= !isCanBuy">Мне есть 18 лет</button>
+            <button @click="isCantBuy= !isCantBuy">Мне нет 18 лет</button>
+            <p v-show="isCanBuy">Вы можете заказать товар</p>
+            <p v-show="isCantBuy">Вы не можете заказать товар</p>
+
+            <br />
+            <button @click="isShowMore= !isShowMore">Показать еще</button>
+            <p v-show="isShowMore" class="show">Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Similique, beatae.
+            </p>
+
+            <br />
+            <button @click="random">Сгенерировать число</button>
+            <p>{{ randomNumber}}</p>
+            <div>
+                <p v-if="randomNumber <5">Число меньше 5</p>
+                <p v-else-if="randomNumber>= 5 && randomNumber <10">Число от 5
+                        до 10</p>
+                    <p v-else>Число равно 10</p>
+                </div>
+            </div>
+
+            <script>
+        const HelloVueApp = {
+            data() {
+                return {
+                    isShowMore: false,
+                    isCanBuy: false,
+                    isCantBuy: false,
+                    message: 'Hello Vue!!',
+                    byuBtn: 'Купить',
+                    count: 0,
+                    randomNumber: '',
+                };
+            },
+
+            methods: {
+                buy(){
+                    if(this.count<1){
+                        this.count++;
+                        this.byuBtn = 'Товар в корзине';
+                    }  
+                },
+
+                random(){
+                    this.randomNumber = Math.floor(Math.random()*10+1);
+                }
+            },
+        };
+
+        Vue.createApp(HelloVueApp).mount('#app');
+    </script>
+        </body>
+    </html>

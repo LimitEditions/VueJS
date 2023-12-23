@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@next"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            
+<!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
+
+    <button @click="btnReverse">{{ btn }}</button>
+
+<!-- 2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить". -->
+
+    <ul>
+        <li v-for="(item, index) in items" :key="index" @click="remove(index)">{{ item }}</li>
+    </ul>
+    <button @click="add">Добавить</button>
+
+
+<!-- 3. *Дополнительное задание: При клике на элемент списка он должен быть удален. (по желанию) -->
+
+        </div>
+        <script>
+    const HomeWork_1 = {
+        data() {
+            return{
+                btn: 'Перевернуть',
+                items: ['Элемент'],
+            };
+        },
+        
+        methods: {
+            btnReverse() {
+                this.btn = 'ьтунревереП';
+            },
+            
+            add(){
+                this.items.push('Новый элемент списка');
+            },
+
+            remove(index ){
+                this.items.splice(index, 1);
+            }
+        },
+    }
+    Vue.createApp(HomeWork_1).mount('#app');
+</script>
+    </body>
+</html>
