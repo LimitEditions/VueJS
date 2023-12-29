@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <article class="product">
+            <h2 class="product__name">{{ product.name }}</h2>
+            <p class="product__price">{{ product.price }}</p>
+            <img :width="product.width" :src="product.img" alt="photo">
+            <p>{{sale}}</p>
+            <button class="sale-btn" @click.once='buySale'>Применить скидку</button>
+        </article>
+
+        <article v-for="item in users" :key="item.id">
+            <h3>{{item.name}}</h3>
+            <p>{{item.age}}</p>
+        </article>
+
+        <ul>
+            <li v-for="item in goods" :key="item.id">
+                <label> <input type="checkbox">{{ item.title}}</label>
+                <input type="text" v-model="item.amount">
+            </li>
+        </ul>
+
+        <div>
+            <div>
+                <h3>Имя</h3>
+                <input type="text" v-model.lazy="firstName">
+            </div>
+            <div>
+                <h3>Фамилия</h3>
+                <input type="text" v-model.lazy="lastName">
+            </div>
+            <div>
+                <h3>Email</h3>
+                <input type="text" v-model.lazy="email">
+            </div>
+            <button @click="addUser">Добавить контакт</button>
+            <ul>
+                <li v-for="item in persons" :key="item.id">{{item.firstName}} {{item.lastName}} - {{item.email}}</li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <script>
+        const App = {
+            data() {
+                return {
+                    product: {
+                        name: 'Product name 1',
+                        price: 400,
+                        img: 'https://gas-kvas.com/uploads/posts/2023-02/1675661586_gas-kvas-com-p-risunok-geometricheskaya-semya-zhivotnie-4.jpg',
+                        width: 300,
+
+
+                    },
+                    sale: 0,
+
+                    users:[
+                        {
+                            id: 1,
+                            name: 'Leanne graham',
+                            age: 25,
+                        },
+                        {
+                            id: 2,
+                            name: 'Ervine graham',
+                            age: 33,
+                        },
+                        {
+                            id: 3,
+                            name: 'Clementine graham',
+                            age: 34,
+                        },
+                        {
+                            id: 4,
+                            name: 'Patricica graham',
+                            age: 40,
+                        },
+                        {
+                            id: 5,
+                            name: 'Chelsy graham',
+                            age: 18,
+                        },
+                    ],
+
+                    goods: [
+                        {id:1, title: "Хлеб  ", amount: 1},
+                        {id:2, title: "Молоко  ", amount: 20},
+                        {id:3, title: "Соль  ", amount: 12},
+                        {id:4, title: "Сахар  ", amount: 53},
+                    ],
+
+                    persons:[],
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+
+
+
+                };
+
+            },
+
+            methods: {
+                buySale() {
+                    this.sale = Math.floor(Math.random() * 20 + 1);
+                    this.product.price = this.product.price - (this.product.price * this.sale) / 100;
+                },
+
+                addUser(){
+                    const newUser = {
+                        id: this.persons.length + 1,
+                        firstName: this.firstName,
+                        lastName: this.lastName,
+                        email: this.email,
+                    };
+                    this.persons.push(newUser);
+                    this.firstName = '';
+                    this.lastName = '';
+                    this.email = '';
+ 
+                }
+
+
+            },
+
+            computed: {
+                // property() {
+                //     return this.property;
+                // },
+
+            },
+        }
+
+        Vue.createApp(App).mount('#app');
+    </script>
+</body>
+
+</html>

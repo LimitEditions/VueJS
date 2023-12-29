@@ -344,4 +344,42 @@ img {
 
 .sites__logo:hover path {
   fill: #CDA274;
+}
+
+.blog-nav {
+  position: relative;
+}
+.blog-nav__img {
+  height: 356px;
+}
+.blog-nav__title {
+  width: 503px;
+  height: 178px;
+  border-top-left-radius: 37px;
+  border-top-right-radius: 37px;
+  background-color: #fff;
+  position: absolute;
+  left: calc(50vw - 251.5px);
+  top: 178px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-nav__title_headding {
+  font-size: 50px;
+}
+.blog-nav__title_breadCrumbs-link {
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.22px;
+  cursor: pointer;
+}
+
+.blog-nav__title_breadCrumbs-link:not(:last-child)::after {
+  content: "/";
+  padding-left: 6px;
+  padding-right: 6px;
 }/*# sourceMappingURL=style.css.map */

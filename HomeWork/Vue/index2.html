@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>HomeWork_2</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+        <div>
+            <p>Сортировка</p>
+            <button @click="up">По возрастанию</button>
+            <button @click="down">По убыванию</button>
+            <ul>
+                <li v-for="item in products" :key="item.id">
+                    <h3>{{item.productName}}</h3>
+                    <p>Цена: {{item.productPrice}}</p>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <script>
+        const App = {
+            data() {
+                return {
+                    products: [
+                        {
+                            id: 1,
+                            productName: 'Стол',
+                            productPrice: 1500,
+                        },
+                        {
+                            id: 2,
+                            productName: 'Стул',
+                            productPrice: 700,
+                        },
+                        {
+                            id: 3,
+                            productName: 'Диван',
+                            productPrice: 5000,
+                        },
+                        {
+                            id: 4,
+                            productName: 'Кровать',
+                            productPrice: 2500,
+                        },
+                        {
+                            id: 5,
+                            productName: 'Тумбочка',
+                            productPrice: 500,
+                        },
+                        {
+                            id: 6,
+                            productName: 'Зеркало',
+                            productPrice: 1200,
+                        }
+                        
+                    ]
+                }
+            },
+
+            methods: {
+                up(){
+                    this.products.sort((a, b) => a.productPrice - b.productPrice);
+                },
+
+                down(){
+                    this.products.sort((a, b) => b.productPrice - a.productPrice);
+                },
+                
+            },
+        }
+        Vue.createApp(App).mount('#app');
+    </script>
+
+
+</body>
+
+</html>

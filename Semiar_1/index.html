@@ -43,15 +43,15 @@
             <button @click="random">Сгенерировать число</button>
             <p>{{ randomNumber}}</p>
             <div>
-                <p v-if="randomNumber <5">Число меньше 5</p>
-                <p v-else-if="randomNumber>= 5 && randomNumber <10">Число от 5
+                <p v-if="randomNumber < 5">Число меньше 5</p>
+                <p v-else-if="randomNumber>= 5 && randomNumber < 10">Число от 5
                         до 10</p>
-                    <p v-else>Число равно 10</p>
-                </div>
+                <p v-else>Число равно 10</p>
             </div>
+        </div>
 
-            <script>
-        const HelloVueApp = {
+        <script>
+            const HelloVueApp = {
             data() {
                 return {
                     isShowMore: false,
@@ -79,6 +79,6 @@
         };
 
         Vue.createApp(HelloVueApp).mount('#app');
-    </script>
-        </body>
-    </html>
+        </script>
+    </body>
+</html>
