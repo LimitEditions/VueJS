@@ -56,6 +56,7 @@ img {
         &_text {
             font-family: $text-font;
             font-size: 20px;
+            color: $main-colorText;
         }
     }
 }
@@ -228,6 +229,11 @@ img {
             margin-bottom: 12px;
         }
 
+        &_title-blog {
+            text-align: start;
+            margin-bottom: 0;
+        }
+
         &_text {
             color: $color-text;
             font-family: $text-font;
@@ -240,6 +246,7 @@ img {
     &__cards {
         margin-top: 52px;
         @include flex(flex, space-between, center);
+
 
         &_item {
             width: 382px;
@@ -290,6 +297,17 @@ img {
             letter-spacing: 0.16px;
         }
     }
+
+    &__cards-blog {
+        margin-top: 0;
+        flex-wrap: wrap;
+    }
+}
+
+.articles-blog {
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
 }
 
 .footer {
@@ -399,10 +417,6 @@ img {
             font-size: 50px;
         }
 
-        &_breadCrumbs {
-
-        }
-
         &_breadCrumbs-link {
             color: $color-text;
             font-family: $text-font;
@@ -419,4 +433,75 @@ img {
     content: "/";
     padding-left: 6px;
     padding-right: 6px;
+}
+
+.post {
+    margin-top: 200px;
+    margin-bottom: 150px;
+
+    &__title {
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-bottom: 27px;
+    }
+
+    &__articles {
+        padding: 22px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 62px;
+        border: 1px solid #E7E7E7;
+        box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+        &_img {
+            border-radius: 37px;
+        }
+
+        &_desc {
+            width: 489px;
+            padding: 51px 34px 51px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 41px;
+        }
+
+        &_desc-card {
+            width: 463px;
+        }
+
+        &_headding {
+            font-size: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        &_text {
+            color: $color-text;
+            font-family: $text-font;
+            font-size: 22px;
+            letter-spacing: 0.22px;
+            margin-top: 22px;
+        }
+    }
+}
+
+.page {
+    margin-top: 51px;
+    margin-bottom: 200px;
+    gap: 20px;
+    @include flex(flex, center, center);
+
+    &__link {
+        width: 52px;
+        height: 52px;
+        border: 1px solid $color-decoration;
+        border-radius: 35px;
+        @include flex(flex, center, center);
+        font-family: $text-font;
+        cursor: pointer;
+    }
+
+    &__link:hover {
+        background: #F4F0EC;
+        border: #F4F0EC;
+    }
 }

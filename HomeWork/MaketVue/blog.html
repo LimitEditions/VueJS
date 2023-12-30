@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/vue@next"></script>
     <title>Blog</title>
 </head>
 <body>
@@ -37,15 +36,18 @@
 
     </nav>
     <section>
-        <h2></h2>
-        <div>
+       <div class="container post">
+        <h2 class="post__title">Latest Post</h2>
+        <div class="post__articles">
             <div>
-                <img src="./img/LatestPost.png" alt="LatestPost">
+                <img class="post__articles_img" src="./img/LatestPost.png" alt="LatestPost">
             </div>
-            <div>
-                <h3>Low Cost Latest Invented Interior Designing Ideas</h3>
-                <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</p>
-                <p>Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
+            <div class="post__articles_desc">
+                <div class="post__articles_desc-card">
+                    <h3 class="post__articles_headding">Low Cost Latest Invented Interior Designing Ideas</h3>
+                    <p class="post__articles_text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</p>
+                    <p class="post__articles_text">Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
+                </div>
                 <div class="articles__cards_goNew">
                     <time class="articles__cards_time" datetime="2022-12-26">26 December,2022</time>
                     <button class="cards__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
@@ -56,7 +58,40 @@
                 </div>
             </div>
         </div>
+       </div>
         
+    </section>
+    <section id="app">
+        <div class="container articles articles-blog">
+            <h2 class="articles__headdig_title articles__headdig_title-blog">Articles & News</h2>
+        <div class="articles__cards articles__cards-blog">
+            <div v-for="item in cards" :key="item.id" class="articles__cards_item">
+                    <div class="articles__cards_item-design">
+                        <img class="articles__cards_img" :src="item.img" alt="News">
+                        <h3 class="articles__cards_text">{{ item.name }}</h3>
+                    </div>
+                    <div class="articles__cards_desc">
+                        <h2 class="articles__cards_title">{{ item.title }}</h2>
+                        <div class="articles__cards_goNew">
+                            <time class="articles__cards_time" datetime="2022-12-26">{{ item.data }}</time>
+                            <button class="cards__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
+                         fill="none"> <circle cx="35" cy="35" r="35"
+                         fill="#F4F0EC"/> <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="container page">
+            <a class="page__link" href="#">01</a>
+            <a class="page__link" href="#">02</a>
+            <a class="page__link" href="#">03</a>
+            <a class="page__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none"><circle cx="35" cy="35" r="35" fill="none"></circle> <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        </div>
     </section>
 
 
@@ -110,6 +145,8 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="./script.js"></script>
+    
 </body>
 </html>
