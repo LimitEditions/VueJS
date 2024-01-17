@@ -505,3 +505,114 @@ img {
         border: #F4F0EC;
     }
 }
+
+.details-img {
+    margin-bottom: 200px;
+}
+
+.details-tag {
+    display: flex;
+    gap: 52px;
+}
+
+.details {
+    width: 801px;
+
+    &__headding {
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 11px;
+    }
+
+    &__lable {
+        margin-top: 46px;
+        margin-bottom: 48px;
+        display: flex;
+        justify-content: space-between;
+
+        &_date {
+            color: $color-text;
+            font-family: $text-font;
+            font-size: 16px;
+            letter-spacing: 0.16px;
+        }
+    }
+
+    &__text {
+        color: $color-text;
+        font-family: $text-font;
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    &__comments {
+        height: 267px;
+        border-radius: 50px;
+        background: #F4F0EC;
+        @include flex(flex, center, center);
+        flex-direction: column;
+        margin-bottom: 27px;
+
+        &_mark {
+            width: 74px;
+            height: 56px;
+
+        }
+
+        &_text {
+            color: $color-decoration;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+
+    &__comments-block {
+        width: 345px;
+        height: 161px;
+        @include flex(flex, center, center);
+        flex-direction: column;
+    }
+
+    &__list {
+        margin-left: 24px;
+        vertical-align: text-top;
+    }
+
+    &__list ::marker {
+        font-size: 20px;
+        color: $color-decoration;
+        letter-spacing: 0.4px;
+
+    }
+}
+
+.tags {
+    &__name {
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        margin-bottom: 25px;
+    }
+
+    &__btn {
+        width: 335px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        &_style {
+            border-radius: 10px;
+            background: #F4F0EC;
+            padding: 9px 30px;
+            cursor: pointer;
+            color: $main-colorText;
+            font-family: $text-font;
+            font-size: 18px;
+        }
+
+        &_active {
+            background-color: $main-colorText;
+            color: white;
+        }
+    }
+}
