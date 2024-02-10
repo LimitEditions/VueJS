@@ -1,6 +1,5 @@
 <template>
-  <OurProject />
-  <!-- <Blog /> -->
+  <ProjectDetails />
   <!-- <StartHeadding />
   <main>
     <div class="container main">
@@ -132,23 +131,20 @@
 </template>
 
 <script>
-// import StartHeadding from './components/Start.vue';
+// import Start from './components/Start.vue';
 // import EndFooter from './components/End.vue';
 // import MainCards from './components/MainCards.vue';
-import OurProject from './components/OurProject.vue';
-// import Blog from './components/Blog.vue';
+import ProjectDetails from './components/ProjectDetails.vue';
+
 
 export default {
   name: 'App',
   components: {
-    // StartHeadding,
-    // EndFooter,
+    // Start,
+    // End,
     // MainCards,
-    OurProject,
-    // Blog,
-
-    
-}
+    ProjectDetails,
+  }
 }
 </script>
 

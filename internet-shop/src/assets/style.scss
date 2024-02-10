@@ -665,3 +665,58 @@ img {
         }
     }
 }
+
+.projectDetails {
+    width: 658px;
+    margin: 200px auto 100px;
+
+    &__title {
+        font-size: 50px;
+        font-weight: $text-weight;
+        ;
+        margin-bottom: 11px;
+    }
+
+    &__desc {
+        font-family: $text-font;
+        font-size: 22px;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.swiper__lupa{
+    position: relative;
+}
+
+.lupa{
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    border-radius: 70px;
+    @include flex(flex, center, center); 
+    
+}
+
+.lupa-img{
+    width: 37px;
+    height: 37px;
+}
+
+.swiper-radius{
+    border-radius: 70px;
+}
