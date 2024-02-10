@@ -1,19 +1,6 @@
 <template>
-    <StartHeadding />
-    <nav>
-        <div class="blog-nav">
-            <img class="blog-nav__img" src="@/assets/img/banerBlog.jpg" alt="banerBlog">
-            <div class="blog-nav__title">
-                <h2 class="blog-nav__title_headding">Articles & News</h2>
-                <div class="blog-nav__title_breadCrumbs">
-                    <a class="blog-nav__title_breadCrumbs-link" href="#">Home</a>
-                    <a class="blog-nav__title_breadCrumbs-link" href="#">Blog</a>
-                </div>
-  
-            </div>
-        </div>
-  
-    </nav>
+    <Start />
+    <BannerMain :imageSrc="img" title="Articles & News" />
     <section>
         <div class="container post">
             <h2 class="post__title">Latest Post</h2>
@@ -42,7 +29,7 @@
                 </div>
             </div>
         </div>
-  
+
     </section>
     <MainCards />
     <section>
@@ -58,23 +45,30 @@
                 </svg></a>
         </div>
     </section>
-    <EndFooter />
-  </template>
+    <End />
+</template>
   
-  <script>
-  import StartHeadding from './components/Start.vue';
-  import EndFooter from './components/End.vue';
-  import MainCards from './components/MainCards.vue';
-  
-  export default {
+<script>
+import Start from './Start.vue';
+import End from './End.vue';
+import MainCards from './MainCards.vue';
+import BannerMain from './BannerMain.vue';
+
+export default {
     name: 'App',
     components: {
-        StartHeadding,
-        EndFooter,
+        Start,
+        End,
         MainCards,
-    }
-  }
-  </script>
+        BannerMain
+    },
+    data() {
+        return {
+            img: require('@/assets/img/banerBlog.jpg'),
+        };
+    },
+}
+</script>
   
-  <style></style>
+<style></style>
   

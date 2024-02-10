@@ -165,6 +165,15 @@ img {
   height: 70px;
   background-color: #f4f0ec;
   border-radius: 35px;
+  cursor: pointer;
+}
+.cards__item_btn-vector {
+  width: 8px;
+  height: 18px;
+  margin: 0 auto;
+}
+.cards__item_btn:hover {
+  background-color: #CDA274;
 }
 
 .count {
@@ -442,7 +451,7 @@ img {
 }
 
 .page {
-  margin-top: 51px;
+  margin-top: 61px;
   margin-bottom: 200px;
   gap: 20px;
   display: flex;
@@ -562,4 +571,40 @@ img {
 .tags__btn_active {
   background-color: #292F36;
   color: white;
+}
+
+.nav {
+  width: 880px;
+  margin: 200px auto 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CDA274;
+  border-radius: 18px;
+}
+.nav__btn {
+  width: 219px;
+  height: 75px;
+  border-radius: 18px;
+  background-color: white;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav__btn_active {
+  background-color: #CDA274;
+  color: white;
+}
+
+.project {
+  -moz-column-count: 2;
+       column-count: 2;
+}
+.project__block {
+  margin-bottom: 35px;
+  display: inline-block;
+}
+.project__block_img {
+  margin-bottom: 24px;
 }/*# sourceMappingURL=style.css.map */

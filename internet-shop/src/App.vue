@@ -1,5 +1,7 @@
 <template>
-  <StartHeadding />
+  <OurProject />
+  <!-- <Blog /> -->
+  <!-- <StartHeadding />
   <main>
     <div class="container main">
       <div class="main__desc">
@@ -73,14 +75,8 @@
             <p class="cards__item_sort">Decor
               / Artchitecture</p>
           </div>
-          <button class="cards__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
-              viewBox="0 0 70 70" fill="none">
-              <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-              <path d="M32 44L40 35L32
-                                                            26" stroke="#292F36" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
+          <button class="cards__item_btn"><img class="cards__item_btn-vector" src="@/assets/img/Vector.png" alt="vector">
+            </button>
         </div>
       </div>
       <div class="cards__item">
@@ -132,21 +128,27 @@
     </div>
   </section>
   <MainCards />
-  <EndFooter />
+  <EndFooter /> -->
 </template>
 
 <script>
-import StartHeadding from './components/Start.vue';
-import EndFooter from './components/End.vue';
-import MainCards from './components/MainCards.vue';
+// import StartHeadding from './components/Start.vue';
+// import EndFooter from './components/End.vue';
+// import MainCards from './components/MainCards.vue';
+import OurProject from './components/OurProject.vue';
+// import Blog from './components/Blog.vue';
 
 export default {
   name: 'App',
   components: {
-    StartHeadding,
-    EndFooter,
-    MainCards,
-  }
+    // StartHeadding,
+    // EndFooter,
+    // MainCards,
+    OurProject,
+    // Blog,
+
+    
+}
 }
 </script>
 

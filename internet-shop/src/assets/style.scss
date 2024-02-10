@@ -176,6 +176,17 @@ img {
             height: 70px;
             background-color: #f4f0ec;
             border-radius: 35px;
+            cursor: pointer;
+        }
+
+        &_btn-vector {
+            width: 8px;
+            height: 18px;
+            margin: 0 auto;
+        }
+
+        &_btn:hover {
+            background-color: $color-decoration;
         }
     }
 }
@@ -485,7 +496,7 @@ img {
 }
 
 .page {
-    margin-top: 51px;
+    margin-top: 61px;
     margin-bottom: 200px;
     gap: 20px;
     @include flex(flex, center, center);
@@ -614,6 +625,43 @@ img {
         &_active {
             background-color: $main-colorText;
             color: white;
+        }
+    }
+}
+
+.nav {
+    width: 880px;
+    margin: 200px auto 61px;
+    @include flex(flex, center, center);
+    border: 1px solid $color-decoration;
+    border-radius: 18px;
+
+    &__btn {
+        width: 219px;
+        height: 75px;
+        border-radius: 18px;
+        background-color: white;
+        font-family: $text-font;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &__btn_active {
+        background-color: $color-decoration;
+        color: white;
+    }
+}
+
+.project {
+    column-count: 2;
+
+    &__block {
+        margin-bottom: 35px;
+        display: inline-block;
+
+        &_img {
+            margin-bottom: 24px;
         }
     }
 }
