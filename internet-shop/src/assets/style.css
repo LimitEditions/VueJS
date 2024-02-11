@@ -604,9 +604,15 @@ img {
 .project__block {
   margin-bottom: 35px;
   display: inline-block;
+  position: relative;
 }
 .project__block_img {
   margin-bottom: 24px;
+}
+.project__block_star {
+  position: absolute;
+  right: 0;
+  top: 5px;
 }
 
 .projectDetails {

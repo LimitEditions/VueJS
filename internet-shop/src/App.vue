@@ -1,5 +1,6 @@
 <template>
   <ProjectDetails />
+  <OurProject />
   <!-- <StartHeadding />
   <main>
     <div class="container main">
@@ -134,6 +135,7 @@
 // import Start from './components/Start.vue';
 // import EndFooter from './components/End.vue';
 // import MainCards from './components/MainCards.vue';
+import OurProject from './components/OurProject.vue';
 import ProjectDetails from './components/ProjectDetails.vue';
 
 
@@ -144,7 +146,8 @@ export default {
     // End,
     // MainCards,
     ProjectDetails,
-  }
+    OurProject
+}
 }
 </script>
 

@@ -659,9 +659,17 @@ img {
     &__block {
         margin-bottom: 35px;
         display: inline-block;
+        position: relative;
 
         &_img {
             margin-bottom: 24px;
+            
+        }
+
+        &_star{
+            position: absolute;
+            right: 0;
+            top: 5px;
         }
     }
 }
