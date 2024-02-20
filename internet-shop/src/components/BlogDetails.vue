@@ -1,5 +1,5 @@
 <template>
-    <StartHeadding />
+    <Start />
     <main>
         <img class="details-img" src="@/assets/img/detail_main.jpg" alt="detail_main">
     </main>
@@ -8,20 +8,20 @@
             <ArticleSort />
         </div>
     </section>
-    <EndFooter />
+    <End />
 </template>
   
 <script>
-import StartHeadding from './components/Start.vue';
-import EndFooter from './components/End.vue';
-import ArticleSort from './components/ArticleSort.vue';
+import Start from './Start.vue';
+import End from './End.vue';
+import ArticleSort from './ArticleSort.vue';
 
 
 export default {
     name: 'App',
     components: {
-        StartHeadding,
-        EndFooter,
+        Start,
+        End,
         ArticleSort
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Start />
-        <BannerMain :imageSrc="img" title="Our Project" />
+        <BannerMain :imageSrc="img" title="Our Project" subtitle="Home/Project"/>
         <section>
             <div class="nav">
                 <button class="nav__btn" v-for="button in buttons" :key="button" :data-name="button"

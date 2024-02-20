@@ -11,7 +11,7 @@
                 <p class="projectDetails__desc">{{ description2 }}</p>
             </div>
         </section>
-       <section class="container swiper__lupa swiper-zoom-container" :zoom="true">
+       <section class="container container_swiper swiper__lupa swiper-zoom-container" :zoom="true">
         <div class="lupa">
             <img class="lupa-img" src="@/assets/img/lupa.png" alt="lupa">
         </div>

@@ -38,9 +38,7 @@
             </div>
             <div class="footer__page">
                 <h3 class="footer__page_title">Pages</h3>
-                <a class="footer__page_link" href="#">Home</a>
-                <a class="footer__page_link" href="#">Project</a>
-                <a class="footer__page_link" href="#">Blog</a>
+                <router-link v-for="(link) in links" :key="link" :to="link.url" class="footer__page_link"> {{ link.title }} </router-link>
             </div>
             <div class="footer__contact">
                 <h3 class="footer__contact">Contact</h3>
@@ -54,6 +52,26 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            links: [
+                {
+                    id: 1,
+                    title: 'Home',
+                    url: '/',
+                },
+                {
+                    id: 2,
+                    title: 'Project',
+                    url: '/project',
+                },
+                {
+                    id: 1,
+                    title: 'Blog',
+                    url: '/blog',
+                }
+            ]
+        };
+    },
 };
 </script>

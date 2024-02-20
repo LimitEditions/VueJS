@@ -26,6 +26,10 @@ img {
 .container {
     width: $container;
     margin: 0 auto;
+
+    &_swiper{
+        width: $container !important;
+    }
 }
 
 .header {
@@ -663,10 +667,10 @@ img {
 
         &_img {
             margin-bottom: 24px;
-            
+
         }
 
-        &_star{
+        &_star {
             position: absolute;
             right: 0;
             top: 5px;
@@ -704,11 +708,11 @@ img {
     overflow: hidden;
 }
 
-.swiper__lupa{
+.swiper__lupa {
     position: relative;
 }
 
-.lupa{
+.lupa {
     width: 132px;
     height: 132px;
     position: absolute;
@@ -718,15 +722,49 @@ img {
     z-index: 2;
     background-color: white;
     border-radius: 70px;
-    @include flex(flex, center, center); 
-    
+    @include flex(flex, center, center);
+
 }
 
-.lupa-img{
+.lupa-img {
     width: 37px;
     height: 37px;
 }
 
-.swiper-radius{
+.swiper-radius {
     border-radius: 70px;
+}
+
+.notfound {
+    display: flex;
+    align-items: center;
+
+    &__left {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        &_title {
+            font-size: 250px;
+            font-weight: 400;
+            line-height: 313px;
+            color: $color-decoration;
+        }
+
+        &_page {
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 0.01em;
+            margin-bottom: 23px;
+            width: 569px;
+        }
+    }
+
+    &__img {
+        width: 913px;
+        height: 1042px;
+        border-bottom-left-radius: 370px;
+    }
 }

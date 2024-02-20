@@ -7,8 +7,10 @@
                 <p class="cards__item_text">{{ title }}</p>
                 <p class="cards__item_sort">Decor / Artchitecture</p>
             </div>
-            <button class="cards__item_btn"><img class="cards__item_btn-vector" src="@/assets/img/Vector.png" alt="vector">
-            </button>
+            <router-link :to="url">
+                <button class="cards__item_btn"><img class="cards__item_btn-vector" src="@/assets/img/Vector.png" alt="vector">
+                </button>
+            </router-link>
         </div>
     </div>
 </template>
@@ -28,12 +30,13 @@ export default {
         return {
             isActive: false,
             click: 0,
+            url: '/project-details'
         };
     },
-    methods:{
-        doubleClick(){
+    methods: {
+        doubleClick() {
             this.click++;
-            if(this.click === 2){
+            if (this.click === 2) {
                 this.isActive = !this.isActive;
                 this.click = 0;
             }

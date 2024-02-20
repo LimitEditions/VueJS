@@ -6,9 +6,7 @@
                 <h3 class="header__logo_text">Interno</h3>
             </div>
             <div class="header__nav">
-                <a href="@/components/App.vue" class="header__nav_text">Home</a>
-                <a href="#" class="header__nav_text">Project</a>
-                <a href="@/components/Blog.vue" class="header__nav_text">Blog</a>
+                <router-link v-for="(link) in links" :key="link" :to="link.url" class="header__nav_text"> {{ link.title }} </router-link>
             </div>
         </div>
     </header>
@@ -16,6 +14,26 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            links: [
+                {
+                    id: 1,
+                    title: 'Home',
+                    url: '/',
+                },
+                {
+                    id: 2,
+                    title: 'Project',
+                    url: '/project',
+                },
+                {
+                    id: 1,
+                    title: 'Blog',
+                    url: '/blog',
+                }
+            ]
+        };
+    },
 };
 </script>
