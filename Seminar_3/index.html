@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./todolist.js"></script>
+    <script src="./task3.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <counter></counter>
+        <Todolist></Todolist>
+        <Task></Task>
+
+    </div>
+
+    <script>
+        const counter = {
+            data() {
+                return {
+                    counter: 0,
+                    title: 'счетчик',
+                };
+            },
+
+            methods: {
+                increase(step) {
+                    this.counter ++;
+                },
+
+                decrease(step) {
+                    this.counter --;
+                }
+            },
+            template: `
+                <div>
+                    <h3>{{title}}</h3>
+                    <p>counter click{{counter}}</p>
+                    <button @click="increase()">+</button>
+                    <button @click="decrease()">-</button>
+                </div>`
+        }
+
+        const App = {
+            components: {
+                counter,
+                Todolist,
+                Task,
+            },
+        }
+        Vue.createApp(App).mount('#app');
+        
+    </script>
+</body>
+
+</html>
+

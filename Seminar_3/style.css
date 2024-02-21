@@ -1,0 +1,98 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+button {
+	cursor: pointer;
+}
+
+.items-text {
+	text-align: center;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 36px;
+	color: #222222;
+}
+
+.items-info {
+	text-align: center;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #9f9f9f;
+}
+
+.items__list.cards {
+	margin-top: 48px;
+}
+
+.items__list {
+	max-width: 1140px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+}
+
+.items__list-cards {
+	width: 360px;
+	height: 582px;
+	background: #f8f8f8;
+}
+
+.items__list-name {
+	margin: 25px 0 12px 18px;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	color: #000000;
+}
+
+.items__list-about {
+	margin: 0 18px 16px 18px;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	color: #5d5d5d;
+}
+
+.items__list-price {
+	margin-left: 18px;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #f16d7f;
+}
+
+.items__list-more {
+	margin-top: 50px;
+	margin-bottom: 93px;
+	text-align: center;
+}
+
+.items__list-btn {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #f26376;
+	background-color: transparent;
+	border: 1px solid #f26376;
+	padding: 15px 39px;
+	cursor: pointer;
+	text-align: center;
+}
