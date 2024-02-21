@@ -95,6 +95,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .main__desc_btn-text {
   color: #fff;

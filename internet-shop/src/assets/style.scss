@@ -97,6 +97,7 @@ img {
             background-color: $main-colorText;
             @include flex(flex, center, center);
             gap: 10px;
+            cursor: pointer;
         }
 
         &_btn-text {
